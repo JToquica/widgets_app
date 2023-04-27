@@ -51,4 +51,10 @@ const List<MenuItem> appMenuItems = [
     link: "/ui-controls",
     icon: Icons.check_box,
   ),
+  MenuItem(
+    title: "App Tutorial",
+    subtitle: "Tutorial Intro App",
+    link: "/tutorial",
+    icon: Icons.accessibility_new_rounded,
+  ),
 ];
