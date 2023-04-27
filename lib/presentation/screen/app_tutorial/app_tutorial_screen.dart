@@ -97,16 +97,16 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
           ),
           Positioned(
             bottom: 30,
-            right: 20,
-            left: 20,
+            right: 0,
+            left: 0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: slides.map((slide) {
                 final int index = slides.indexOf(slide);
-                final double size = index == currentPage ? 18 : 12;
-                final double radius = index == currentPage ? 9 : 6;
+                final double size = (index == currentPage) ? 18 : 12;
+                final double radius = (index == currentPage) ? 9 : 6;
                 final Color color =
-                    index == currentPage ? colors.primary : Colors.grey;
+                    (index == currentPage) ? colors.primary : Colors.grey;
 
                 return GestureDetector(
                   onTap: () {
