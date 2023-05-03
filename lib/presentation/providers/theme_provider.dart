@@ -23,8 +23,8 @@ class ThemeNotifier extends StateNotifier<AppTheme> {
 
   Future<void> loadTheme() async {
     final prefs = await SharedPreferences.getInstance();
-    final isDarkMode = prefs.getBool('isDarkMode') ?? false;
-    final selectedColor = prefs.getInt('selectedColor') ?? 1;
+    final isDarkMode = prefs.getBool('isDarkMode') ?? true;
+    final selectedColor = prefs.getInt('selectedColor') ?? 0;
     state = AppTheme(
       selectedColor: selectedColor,
       isDarkMode: isDarkMode,
@@ -33,11 +33,9 @@ class ThemeNotifier extends StateNotifier<AppTheme> {
 
   void toggleDarkMode() {
     state = state.copyWith(isDarkMode: !state.isDarkMode);
-    persistTheme();
   }
 
   void changeColorIndex(int colorIndex) {
     state = state.copyWith(selectedColor: colorIndex);
-    persistTheme();
   }
 }
