@@ -63,4 +63,16 @@ const List<MenuItem> appMenuItems = [
     link: "/infinite",
     icon: Icons.list,
   ),
+  MenuItem(
+    title: "Counter",
+    subtitle: "Contador usando provider",
+    link: "/counter",
+    icon: Icons.plus_one,
+  ),
+  MenuItem(
+    title: "Theme Change",
+    subtitle: "Cambiar tema de la app",
+    link: "/theme",
+    icon: Icons.colorize,
+  ),
 ];
