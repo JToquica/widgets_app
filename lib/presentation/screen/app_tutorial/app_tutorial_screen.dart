@@ -65,7 +65,7 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
   Widget build(BuildContext context) {
     final ColorScheme colors = Theme.of(context).colorScheme;
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: colors.background,
       appBar: AppBar(
         title: const Text('App Tutorial'),
       ),
